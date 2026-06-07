@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEKE Rukotvorine – Proizvod</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/shared.css">
+<link rel="stylesheet" href="styles/product.css">
+</head>
+<body>
+<header>
+  <a href="index.html" class="brand">
+    <div class="brand-logo"><img src="images/logo.png" alt="SEKE rukotvorine logo" width="57px"/></div>
+    <div class="brand-text"><h1>SEKE Rukotvorine</h1><p>Ručno rađeno sa ljubavlju</p></div>
+  </a>
+  <div class="header-actions">
+    <button id="a11y-toggle" class="a11y-toggle" type="button" aria-pressed="false"
+            aria-label="Uključi način za slijepe i slabovidne osobe">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="4" r="2"/>
+        <path d="M3.5 7.5c2.8 1 5.5 1.5 8.5 1.5s5.7-.5 8.5-1.5"/>
+        <path d="M12 9v6"/>
+        <path d="M12 15l-3.5 6"/>
+        <path d="M12 15l3.5 6"/>
+      </svg>
+      <span class="a11y-toggle-label">Način za slijepe</span>
+    </button>
+    <a href="cart.html" class="cart-link" aria-label="Košarica">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span id="cart-count">0</span>
+    </a>
+  </div>
+</header>
+
+<div class="page">
+  <aside>
+    <a href="index.html" class="sidebar-home">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Početna
+    </a>
+    <span class="sidebar-section">Kategorije</span>
+    <a href="category?cat=Dekice" class="sidebar-link" data-cat="Dekice">Dekice</a>
+    <a href="category?cat=Tetra+pelene" class="sidebar-link" data-cat="Tetra pelene">Tetra pelene</a>
+    <a href="category?cat=Slinčeki" class="sidebar-link" data-cat="Slinčeki">Slinčeki</a>
+    <a href="category?cat=Heklani+crtani+likovi" class="sidebar-link" data-cat="Heklani crtani likovi">Heklani crtani likovi</a>
+    <a href="category?cat=Heklani+dinosauri" class="sidebar-link" data-cat="Heklani dinosauri">Heklani dinosauri</a>
+    <a href="category?cat=Heklane+domaće+životinje" class="sidebar-link" data-cat="Heklane domaće životinje">Heklane domaće životinje</a>
+    <a href="category?cat=Heklane+divlje+životinje" class="sidebar-link" data-cat="Heklane divlje životinje">Heklane divlje životinje</a>
+    <a href="category?cat=Heklane+kornjačice" class="sidebar-link" data-cat="Heklane kornjačice">Heklane kornjačice</a>
+    <a href="category?cat=Gumice+za+kosu" class="sidebar-link" data-cat="Gumice za kosu">Gumice za kosu</a>
+    <a href="category?cat=Trakice+za+glavu" class="sidebar-link" data-cat="Trakice za glavu">Trakice za glavu</a>
+    <a href="category?cat=Set+5+in+1" class="sidebar-link" data-cat="Set 5 in 1">Set 5 in 1</a>
+  </aside>
+
+  <main>
+    <div class="product-main" id="product-main"></div>
+  </main>
+</div>
+
+<!-- ADD TO CART MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h3>Potvrda željenog artikla</h3>
+    <div class="modal-item">
+      <div class="modal-img" id="modal-img">🧶</div>
+      <div>
+        <p class="modal-product-name" id="modal-name"></p>
+        <p class="modal-product-sub"  id="modal-sub"></p>
+        <p class="modal-product-price" id="modal-price"></p>
+      </div>
+    </div>
+    <div class="modal-rows">
+      <div class="modal-row"><span>Količina:</span><span id="modal-qty"></span></div>
+      <div class="modal-row"><span>Boja:</span><span id="modal-color-row"></span></div>
+      <div class="modal-row" style="font-weight:700;font-size:15px;padding-top:8px;border-top:1px solid #F3E8EE;margin-top:6px"><span>Ukupno:</span><span id="modal-total"></span></div>
+    </div>
+    <div class="modal-btns">
+      <button class="modal-cancel" onclick="closeModal()">Otkaži</button>
+      <button class="modal-confirm" onclick="confirmAdd()">Potvrdi</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script src="scripts/firebase-config.js"></script>
+<script src="scripts/firebase-data.js"></script>
+<script src="scripts/shared.js"></script>
+<script src="scripts/product.js"></script>
+</body></html>

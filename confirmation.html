@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Narudžba poslana – SEKE Rukotvorine</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/shared.css">
+<link rel="stylesheet" href="styles/confirmation.css">
+</head>
+<body>
+<header>
+  <a href="index.html" class="brand">
+    <div class="brand-logo"><img src="images/logo.png" alt="SEKE rukotvorine logo" width="57px"/></div>
+    <div class="brand-text"><h1>SEKE Rukotvorine</h1><p>Ručno rađeno sa ljubavlju</p></div>
+  </a>
+  <div class="header-actions">
+    <button id="a11y-toggle" class="a11y-toggle" type="button" aria-pressed="false"
+            aria-label="Uključi način za slijepe i slabovidne osobe">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="4" r="2"/>
+        <path d="M3.5 7.5c2.8 1 5.5 1.5 8.5 1.5s5.7-.5 8.5-1.5"/>
+        <path d="M12 9v6"/>
+        <path d="M12 15l-3.5 6"/>
+        <path d="M12 15l3.5 6"/>
+      </svg>
+      <span class="a11y-toggle-label">Način za slijepe</span>
+    </button>
+    <a href="cart.html" class="cart-link" aria-label="Košarica">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span id="cart-count">0</span>
+    </a>
+  </div>
+</header>
+
+<div class="page">
+  <main>
+    <div class="confirm-main">
+      <div class="confirm-card" id="confirm-card">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h2>Narudžba poslana!</h2>
+        <p class="subtitle" id="confirm-subtitle">Hvala! Vaša narudžba je primljena.</p>
+        <p class="confirm-email" id="confirm-email"></p>
+
+        <div class="order-summary-box" id="order-items-box">
+          <h4>Vaša narudžba</h4>
+          <div id="order-items"></div>
+          <div class="order-total-row">
+            <span>Ukupno:</span>
+            <span id="order-total">€0.00</span>
+          </div>
+        </div>
+
+        <a href="index.html" class="btn-home">Nastavite sa kupovinom</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script src="scripts/firebase-config.js"></script>
+<script src="scripts/firebase-data.js"></script>
+<script src="scripts/shared.js"></script>
+<script src="scripts/confirmation.js"></script>
+</body></html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload kataloga u Firestore – SEKE</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 560px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+    button { background: #EC4899; color: #fff; border: none; border-radius: 8px; padding: 12px 20px; font-size: 16px; font-weight: 700; cursor: pointer; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .ok { color: #16A34A; font-weight: 700; }
+    .err { color: #DC2626; font-weight: 700; }
+    code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Upload kataloga u Firestore</h1>
+  <p>Uploada cijeli sadržaj iz <code>scripts/data.js</code> u Firestore dokument <code>catalog/main</code>.</p>
+  <p><strong>Važno:</strong> otvori preko lokalnog servera (npr. Live Server), ne direktno kao datoteku.</p>
+  <button id="upload-btn" type="button">Uploadaj katalog</button>
+  <p id="status"></p>
+  <ul id="preview"></ul>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="scripts/firebase-config.js"></script>
+  <script src="scripts/data.js"></script>
+  <script>
+    firebase.initializeApp(firebaseConfig);
+    const statusEl = document.getElementById('status');
+    const previewEl = document.getElementById('preview');
+    const btn = document.getElementById('upload-btn');
+
+    // Prikaži što će se uploadati
+    previewEl.innerHTML = data.categories.map(function(c) {
+      return '<li><strong>' + c.name + '</strong> — ' + c.products.length + ' proizvoda</li>';
+    }).join('');
+
+    btn.addEventListener('click', async function() {
+      btn.disabled = true;
+      statusEl.textContent = 'Upload u tijeku...';
+      statusEl.className = '';
+
+      try {
+        // categoriesJson — pouzdano spremanje ugniježđenih proizvoda u Firestore
+        const clone = JSON.parse(JSON.stringify(window.data));
+        const payload = {
+          website: clone.website,
+          categoriesJson: JSON.stringify(clone.categories)
+        };
+
+        await firebase.firestore().collection('catalog').doc('main').set(payload);
+
+        // Provjera nakon uploada
+        const verify = await firebase.firestore().collection('catalog').doc('main').get();
+        const uploaded = verify.data();
+        var categories = [];
+        if (uploaded.categoriesJson) {
+          categories = JSON.parse(uploaded.categoriesJson);
+        } else {
+          categories = uploaded.categories || [];
+        }
+        const count = categories.length;
+        const products = categories.reduce(function(s, c) {
+          return s + (c.products ? c.products.length : 0);
+        }, 0);
+        const sample = categories.slice(0, 3).map(function(c) {
+          return c.name + ': ' + (c.products[0] ? c.products[0].name : '?');
+        }).join(' | ');
+
+        statusEl.textContent = 'Uspjeh! Uploadano ' + count + ' kategorija i ' + products + ' proizvoda. Primjer: ' + sample;
+        statusEl.className = 'ok';
+      } catch (err) {
+        statusEl.textContent = 'Greška: ' + err.message;
+        statusEl.className = 'err';
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

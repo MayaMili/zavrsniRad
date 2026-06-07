@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plaćanje – SEKE Rukotvorine</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/shared.css">
+<link rel="stylesheet" href="styles/checkout.css">
+</head>
+<body>
+<header>
+  <a href="index.html" class="brand">
+    <div class="brand-logo"><img src="images/logo.png" alt="SEKE rukotvorine logo" width="57px"/></div>
+    <div class="brand-text"><h1>SEKE Rukotvorine</h1><p>Ručno rađeno sa ljubavlju</p></div>
+  </a>
+  <div class="header-actions">
+    <button id="a11y-toggle" class="a11y-toggle" type="button" aria-pressed="false"
+            aria-label="Uključi način za slijepe i slabovidne osobe">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="4" r="2"/>
+        <path d="M3.5 7.5c2.8 1 5.5 1.5 8.5 1.5s5.7-.5 8.5-1.5"/>
+        <path d="M12 9v6"/>
+        <path d="M12 15l-3.5 6"/>
+        <path d="M12 15l3.5 6"/>
+      </svg>
+      <span class="a11y-toggle-label">Način za slijepe</span>
+    </button>
+    <a href="cart.html" class="cart-link" aria-label="Košarica">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span id="cart-count">0</span>
+    </a>
+  </div>
+</header>
+
+<div class="page">
+
+  <main>
+    <div class="checkout-main">
+      <h2 class="page-title">Vaši podaci</h2>
+      <div class="checkout-grid">
+
+        <!-- FORM -->
+        <div class="checkout-form">
+          <h3>Podaci za dostavu</h3>
+          <div class="form-group"><label>Ime <em>*</em></label><input type="text" id="f-ime" placeholder="Unesite vaše ime"></div>
+          <div class="form-group"><label>Prezime <em>*</em></label><input type="text" id="f-prezime" placeholder="Unesite vaše prezime"></div>
+          <div class="form-group">
+            <label for="f-email">Email adresa <em>*</em></label>
+            <input type="email" id="f-email" placeholder="vasa.email@primer.com" aria-describedby="email-error">
+            <p class="form-error" id="email-error" role="alert" style="display:none">Email adresa nije ispravno unesena. Mora sadržavati znak @.</p>
+          </div>
+          <div class="info-box">
+            <strong>Važne informacije:</strong>
+            <ul>
+              <li>Vaša narudžba će biti potvrđena putem emaila</li>
+              <li>Dostava u roku do 14 radnih dana</li>
+              <li>Svi detalji o plaćanju biće poslani putem email-a</li>
+              <li>Povrat robe nije moguć</li>
+            </ul>
+          </div>
+          <button class="btn-primary" onclick="submitOrder()" id="submit-btn">Pošalji narudžbu</button>
+          <a href="cart.html" class="btn-outline" style="display:block;text-align:center;margin-top:10px;text-decoration:none">← Natrag na košaricu</a>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="order-summary">
+          <h3>Pregled narudžbe</h3>
+          <div id="summary-products"></div>
+          <div class="summary-row"><span>Subtotal</span><span id="subtotal-val">€0.00</span></div>
+          <div class="summary-row"><span>Dostava</span><span id="shipping-val" class="free">Besplatna</span></div>
+          <div class="summary-row total"><span>Ukupno:</span><span class="total-price" id="total-val">€0.00</span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script src="scripts/firebase-config.js"></script>
+<script src="scripts/firebase-data.js"></script>
+<script src="scripts/shared.js"></script>
+<script src="scripts/checkout.js"></script>
+</body></html>

@@ -1,0 +1,32 @@
+.cat-main { 
+    padding: 36px 40px 52px; 
+}
+
+.cat-header { 
+    margin-bottom: 28px; 
+}
+
+.cat-title { 
+    font-family:'Playfair Display',serif; 
+    font-size:32px; font-weight:700; 
+    color:var(--text-dark); margin-bottom:6px; 
+}
+
+.cat-count {
+    font-size:13px;
+    color:var(--text-light);
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — category page
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .cat-main { padding: 24px 16px 40px; }
+  .cat-title { font-size: 24px; }
+}
+
+@media (max-width: 480px) {
+  /* Force 2-col grid even on small phones (cards min 150px) */
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .cat-title { font-size: 20px; }
+}

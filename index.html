@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEKE Rukotvorine – Ručno rađeno sa ljubavlju</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/shared.css">
+<link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+<header>
+  <a href="index.html" class="brand">
+    <div class="brand-logo"><img src="images/logo.png" alt="SEKE rukotvorine logo" width="57px"/></div>
+    <div class="brand-text"><h1>SEKE Rukotvorine</h1><p>Ručno rađeno sa ljubavlju</p></div>
+  </a>
+  <div class="header-actions">
+    <button id="a11y-toggle" class="a11y-toggle" type="button" aria-pressed="false"
+            aria-label="Uključi način za slijepe i slabovidne osobe">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="4" r="2"/>
+        <path d="M3.5 7.5c2.8 1 5.5 1.5 8.5 1.5s5.7-.5 8.5-1.5"/>
+        <path d="M12 9v6"/>
+        <path d="M12 15l-3.5 6"/>
+        <path d="M12 15l3.5 6"/>
+      </svg>
+      <span class="a11y-toggle-label">Način za slijepe</span>
+    </button>
+    <a href="cart.html" class="cart-link" aria-label="Košarica">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span id="cart-count">0</span>
+    </a>
+  </div>
+</header>
+
+<div class="page">
+  <aside>
+    <a href="index.html" class="sidebar-home active">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Početna
+    </a>
+    <span class="sidebar-section">Kategorije</span>
+    <a href="category?cat=Dekice" class="sidebar-link" data-cat="Dekice">Dekice</a>
+    <a href="category?cat=Tetra+pelene" class="sidebar-link" data-cat="Tetra pelene">Tetra pelene</a>
+    <a href="category?cat=Slinčeki" class="sidebar-link" data-cat="Slinčeki">Slinčeki</a>
+    <a href="category?cat=Heklani+crtani+likovi" class="sidebar-link" data-cat="Heklani crtani likovi">Heklani crtani likovi</a>
+    <a href="category?cat=Heklani+dinosauri" class="sidebar-link" data-cat="Heklani dinosauri">Heklani dinosauri</a>
+    <a href="category?cat=Heklane+domaće+životinje" class="sidebar-link" data-cat="Heklane domaće životinje">Heklane domaće životinje</a>
+    <a href="category?cat=Heklane+divlje+životinje" class="sidebar-link" data-cat="Heklane divlje životinje">Heklane divlje životinje</a>
+    <a href="category?cat=Heklane+kornjačice" class="sidebar-link" data-cat="Heklane kornjačice">Heklane kornjačice</a>
+    <a href="category?cat=Gumice+za+kosu" class="sidebar-link" data-cat="Gumice za kosu">Gumice za kosu</a>
+    <a href="category?cat=Trakice+za+glavu" class="sidebar-link" data-cat="Trakice za glavu">Trakice za glavu</a>
+    <a href="category?cat=Set+5+in+1" class="sidebar-link" data-cat="Set 5 in 1">Set 5 in 1</a>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <h2>Dobrodošli u SEKE Rukotvorine</h2>
+      <div class="hero-img-box">
+        <img src="images/banner.jpg" alt="Prezentacijska slika" class="hero-img">
+      </div>
+      <p>Otkrijte jedinstvene, ručno rađene proizvode napravljene sa puno ljubavi i pažnje. Svaki komad je poseban i namjenjen da razveseli tebe ili tvoje najmilije.</p>
+    </section>
+
+
+
+
+    <section class="o-nama">
+      <h2 class="section-title">O nama</h2>
+      <div class="ona-img">
+        <img src="images/seke.jpg" alt="Slika vlasnica" class="ona-img">
+      </div>
+      <div class="ona-text">
+        <p>SEKE Rukotvorine je obiteljski obrt posvećen izradi kvalitetnih ručno rađenih proizvoda. Svaki proizvod izrađen je sa posebnom pažnjom i ljubavlju, koristeći najmekše i najkvalitetnije materijale.</p>
+        <p>U našoj online trgovini može se pronaći ponešto za svakoga.  Svojim kreacijama Vam želimo unijeti toplinu i radost u vašu svakodnevicu. Od mekanih dekica od razigranih mazilica, svaki komad nosi dio naše priče, a uskoro i vaše.</p>
+        <p>Zahvaljujemo Vam što podržavate naš obiteljski obrt i birate kvalitetu ručno rađenih proizvoda!</p>
+      </div>
+    </section>
+
+
+
+    <section class="zasto">
+      <h2 class="section-title">Zašto izabrati ručno rađeno?</h2>
+      <div class="features">
+        <div class="feat">
+          <img src="images/jedinstveno.jpg" alt="Jedinstveno" class="feat-img">
+          <h3>Jedinstveno</h3>
+          <p>Svaki proizvod je ručno rađen i jedinstven</p>
+        </div>
+
+        <div class="feat">
+          <img src="images/odrzivo.jpg" alt="Održivo" class="feat-img">
+          <h3>Održivo</h3>
+          <p>Napravljeno od ekoloških materijala</p>
+        </div>
+
+        <div class="feat">
+          <img src="images/saLjubavlju.jpg" alt="Sa ljubavlju" class="feat-img">
+          <h3>Sa ljubavlju</h3>
+          <p>Podržite obiteljski obrt i ručni rad</p>
+        </div>
+    </div>
+
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>SEKE Rukotvorine</h4>
+            <p>Ručno rađeni proizvodi za vas i vaše najmilije</p>
+          </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+            <p>Gmail: </p><a href="#">kontakt@sekerukotvorine.com</a>
+            <p>Instagram: </p><a href="https://www.instagram.com/seke.rukotvorine?igsh=YnJ6bDA3emJ5eTRy">@seke.rukotvorine</a>
+            <p>TikTok: </p><a href="https://www.tiktok.com/@seke.rukotvorine?_r=1&_t=ZN-96rRwoiMkdS">@seke.rukotvorine</a></div>
+        <div class="footer-col"><h4>Radno vreme</h4><p>Pon – Ned: 24/7</p><p>Uvijek smo tu za vas</p></div>
+      </div>
+      <p class="footer-copy">© 2026 SEKE Rukotvorine</p>
+    </footer>
+  </main>
+</div>
+
+<script src="scripts/data.js"></script><script src="scripts/shared.js"></script>
+</body></html>

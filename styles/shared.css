@@ -1,0 +1,464 @@
+/* ── SHARED.CSS — SEKE Rukotvorine ── */
+:root {
+  --rose:       #F472B6;
+  --rose-dark:  #EC4899;
+  --rose-light: #FCE7F3;
+  --cream:      #FFF8F5;
+  --cream2:     #FDF0E8;
+  --warm-pink:  #FBCFE8;
+  --text-dark:  #2D1B1B;
+  --text-mid:   #6B4C4C;
+  --text-light: #A07070;
+  --white:      #FFFFFF;
+  --green:      #16A34A;
+  --green-light:#DCFCE7;
+  --nav-h:      64px;
+  --sidebar-w:  220px;
+
+  --pattern-dots-bears: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Ccircle cx='12' cy='12' r='4' fill='%23F9A8D4' opacity='0.55'/%3E%3Ccircle cx='55' cy='28' r='2.5' fill='%23F9A8D4' opacity='0.4'/%3E%3Ccircle cx='78' cy='68' r='5' fill='%23FBCFE8' opacity='0.45'/%3E%3Ccircle cx='28' cy='72' r='3' fill='%23F9A8D4' opacity='0.5'/%3E%3Ccircle cx='70' cy='12' r='2.5' fill='%23FBA4C8' opacity='0.35'/%3E%3Cg transform='translate(16,50) scale(0.58)' opacity='0.28'%3E%3Ccircle cx='0' cy='0' r='12' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='3' fill='%23A07050'/%3E%3Ccircle cx='8' cy='-10' r='3' fill='%23A07050'/%3E%3Cellipse cx='0' cy='4' rx='6' ry='4' fill='%23E8B88A'/%3E%3Ccircle cx='-4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='0' cy='5' r='1' fill='%234A2C0A'/%3E%3C/g%3E%3Cg transform='translate(66,38) scale(0.45)' opacity='0.22'%3E%3Ccircle cx='0' cy='0' r='12' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='3' fill='%23A07050'/%3E%3Ccircle cx='8' cy='-10' r='3' fill='%23A07050'/%3E%3Cellipse cx='0' cy='4' rx='6' ry='4' fill='%23E8B88A'/%3E%3Ccircle cx='-4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='0' cy='5' r='1' fill='%234A2C0A'/%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+/* PATTERN SVGs */
+/* --pattern-dots-bears: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Ccircle cx='12' cy='12' r='4' fill='%23F9A8D4' opacity='0.55'/%3E%3Ccircle cx='55' cy='28' r='2.5' fill='%23F9A8D4' opacity='0.4'/%3E%3Ccircle cx='78' cy='68' r='5' fill='%23FBCFE8' opacity='0.45'/%3E%3Ccircle cx='28' cy='72' r='3' fill='%23F9A8D4' opacity='0.5'/%3E%3Ccircle cx='70' cy='12' r='2.5' fill='%23FBA4C8' opacity='0.35'/%3E%3Cg transform='translate(16,50) scale(0.58)' opacity='0.28'%3E%3Ccircle cx='0' cy='0' r='12' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='3' fill='%23A07050'/%3E%3Ccircle cx='8' cy='-10' r='3' fill='%23A07050'/%3E%3Cellipse cx='0' cy='4' rx='6' ry='4' fill='%23E8B88A'/%3E%3Ccircle cx='-4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='0' cy='5' r='1' fill='%234A2C0A'/%3E%3C/g%3E%3Cg transform='translate(66,38) scale(0.45)' opacity='0.22'%3E%3Ccircle cx='0' cy='0' r='12' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='3' fill='%23A07050'/%3E%3Ccircle cx='8' cy='-10' r='3' fill='%23A07050'/%3E%3Cellipse cx='0' cy='4' rx='6' ry='4' fill='%23E8B88A'/%3E%3Ccircle cx='-4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='0' cy='5' r='1' fill='%234A2C0A'/%3E%3C/g%3E%3C/svg%3E"); */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: 'Nunito', sans-serif; 
+  /* background: var(--cream);  */
+  background-color: var(--cream);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Ccircle cx='12' cy='12' r='4' fill='%23F9A8D4' opacity='0.55'/%3E%3Ccircle cx='55' cy='28' r='2.5' fill='%23F9A8D4' opacity='0.4'/%3E%3Ccircle cx='78' cy='68' r='5' fill='%23FBCFE8' opacity='0.45'/%3E%3Ccircle cx='28' cy='72' r='3' fill='%23F9A8D4' opacity='0.5'/%3E%3Ccircle cx='70' cy='12' r='2.5' fill='%23FBA4C8' opacity='0.35'/%3E%3Cg transform='translate(16,50) scale(0.58)' opacity='0.28'%3E%3Ccircle cx='0' cy='0' r='12' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='3' fill='%23A07050'/%3E%3Ccircle cx='8' cy='-10' r='3' fill='%23A07050'/%3E%3Cellipse cx='0' cy='4' rx='6' ry='4' fill='%23E8B88A'/%3E%3Ccircle cx='-4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='0' cy='5' r='1' fill='%234A2C0A'/%3E%3C/g%3E%3Cg transform='translate(66,38) scale(0.45)' opacity='0.22'%3E%3Ccircle cx='0' cy='0' r='12' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='3' fill='%23A07050'/%3E%3Ccircle cx='8' cy='-10' r='3' fill='%23A07050'/%3E%3Cellipse cx='0' cy='4' rx='6' ry='4' fill='%23E8B88A'/%3E%3Ccircle cx='-4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='0' cy='5' r='1' fill='%234A2C0A'/%3E%3C/g%3E%3C/svg%3E");
+  color: var(--text-dark); 
+}
+
+/* ── HEADER ── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: var(--nav-h);
+  border-bottom: 1.5px solid rgba(244,114,182,0.25);
+  backdrop-filter: blur(10px);
+  background-color: rgba(252,231,243,0.93);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ccircle cx='10' cy='10' r='3.5' fill='%23F9A8D4' opacity='0.4'/%3E%3Ccircle cx='40' cy='22' r='2.5' fill='%23F9A8D4' opacity='0.3'/%3E%3Ccircle cx='60' cy='52' r='4' fill='%23FBCFE8' opacity='0.35'/%3E%3Ccircle cx='22' cy='58' r='3' fill='%23F9A8D4' opacity='0.35'/%3E%3Ccircle cx='55' cy='10' r='2' fill='%23FBA4C8' opacity='0.25'/%3E%3Cg transform='translate(35,44) scale(0.42)' opacity='0.2'%3E%3Ccircle cx='0' cy='0' r='12' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='8' cy='-10' r='5' fill='%23C4956A'/%3E%3Ccircle cx='-8' cy='-10' r='3' fill='%23A07050'/%3E%3Ccircle cx='8' cy='-10' r='3' fill='%23A07050'/%3E%3Cellipse cx='0' cy='4' rx='6' ry='4' fill='%23E8B88A'/%3E%3Ccircle cx='-4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='4' cy='-2' r='1.5' fill='%234A2C0A'/%3E%3Ccircle cx='0' cy='5' r='1' fill='%234A2C0A'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 70px 70px;
+}
+.brand { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  text-decoration: none; 
+}
+
+.brand-logo { 
+  width: 40px; 
+  height: 40px; 
+  background: var(--cream); 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: 'Playfair Display', serif; 
+  font-weight: 700; 
+  font-size: 15px; 
+  color: white; 
+  flex-shrink: 0; 
+}
+.brand-text h1 { 
+  font-family: 'Playfair Display', 
+  serif; font-size: 17px; 
+  font-weight: 700; 
+  color: var(--text-dark); 
+  line-height: 1.1; 
+}
+.brand-text p  { 
+  font-size: 11px; 
+  color: var(--text-light); 
+}
+
+.header-actions { display: flex; align-items: center; gap: 12px; }
+
+/* ── GUMB: Način za slijepe i slabovidne ── */
+.a11y-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--white); color: var(--text-dark);
+  border: 1.5px solid #F3E8EE; border-radius: 50px;
+  padding: 8px 14px;
+  font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700;
+  cursor: pointer; transition: background .2s, border-color .2s, color .2s;
+}
+.a11y-toggle:hover { background: var(--rose-light); border-color: var(--rose); }
+.a11y-toggle svg { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.a11y-toggle svg circle { fill: currentColor; stroke: none; }
+.a11y-toggle[aria-pressed="true"] { background: var(--rose-dark); color: #fff; border-color: var(--rose-dark); }
+.a11y-toggle[aria-pressed="true"]:hover { background: #DB2777; }
+
+/* ── Skriveno samo vizualno (čitljivo čitaču ekrana) ── */
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* ── "Preskoči na glavni sadržaj" link ── */
+.skip-link {
+  position: absolute; left: 8px; top: -60px; z-index: 1000;
+  background: var(--rose-dark); color: #fff;
+  padding: 10px 16px; border-radius: 0 0 10px 10px;
+  font-weight: 700; text-decoration: none;
+  transition: top .2s;
+}
+.skip-link:focus { top: 0; outline: 3px solid #1a1a1a; outline-offset: 2px; }
+
+.cart-link { position: relative; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; background: var(--white); border-radius: 50%; border: 1.5px solid #F3E8EE; transition: background .2s, border-color .2s; }
+.cart-link:hover, .cart-link.active { background: var(--rose-light); border-color: var(--rose); }
+.cart-link svg { width: 22px; height: 22px; stroke: var(--text-dark); fill: none; stroke-width: 1.8; }
+#cart-count { position: absolute; top: -4px; right: -4px; background: var(--rose-dark); color: white; font-size: 10px; font-weight: 700; min-width: 18px; height: 18px; border-radius: 9px; display: none; align-items: center; justify-content: center; padding: 0 4px; border: 2px solid var(--cream); font-family: 'Nunito', sans-serif; }
+
+/* ── PAGE LAYOUT ── */
+.page { display: grid; grid-template-columns: var(--sidebar-w) 1fr; min-height: calc(100vh - var(--nav-h)); }
+
+/* ── SIDEBAR ── */
+aside {
+  background: var(--white); border-right: 1px solid #F3E8EE;
+  padding: 16px 0 40px; position: sticky; top: var(--nav-h);
+  height: calc(100vh - var(--nav-h)); overflow-y: auto;
+}
+.sidebar-home { display: flex; align-items: center; gap: 8px; padding: 10px 20px; margin-bottom: 4px; font-size: 14px; font-weight: 700; color: var(--text-mid); text-decoration: none; border-radius: 0 20px 20px 0; width: calc(100% - 12px); transition: all .15s; }
+.sidebar-home:hover, .sidebar-home.active { background: var(--rose-light); color: var(--rose-dark); }
+.sidebar-section { font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-light); padding: 10px 20px 4px; display: block; }
+.sidebar-link { display: block; padding: 8px 20px; font-size: 13.5px; color: var(--text-mid); text-decoration: none; transition: all .15s; border-radius: 0 20px 20px 0; width: calc(100% - 12px); }
+.sidebar-link:hover, .sidebar-link.active { background: var(--rose-light); color: var(--rose-dark); font-weight: 600; }
+
+/* ── MAIN / CONTENT ── */
+main { display: flex; flex-direction: column; min-width: 0; }
+
+/* ── SECTION TITLE ── */
+.section-title { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: var(--text-dark); margin-bottom: 24px; text-align: center; }
+
+/* ── PRODUCT CARD (category page) — vjerno Figmi ── */
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+
+.product-card { background: var(--white); border-radius: 16px; border: 1px solid #F3E8EE; overflow: hidden; transition: transform .2s, box-shadow .2s; animation: fadeUp .35s ease both; }
+.product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(244,114,182,0.13); }
+
+/* .product-card-img { position: relative; width: 100%; padding-top: 85%; background: linear-gradient(135deg, var(--warm-pink), var(--rose-light)); overflow: hidden; } */
+
+.product-card-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(135deg, var(--warm-pink), var(--rose-light));
+  overflow: hidden;
+}
+
+.product-card-img img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Vlastiti compositing sloj — sprječava treperenje/nestajanje slike pri resize-u */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.product-card-img .img-placeholder { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 44px; }
+
+.product-card-body { padding: 14px 16px 16px; }
+.product-card-name { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; line-height: 1.35; }
+.product-card-desc { font-size: 12px; color: var(--text-light); margin-bottom: 12px; line-height: 1.5; }
+.product-card-footer { display: flex; align-items: center; justify-content: space-between; }
+.product-card-price { font-size: 18px; font-weight: 700; color: var(--text-dark); }
+
+.btn-pogledaj { display: flex; align-items: center; gap: 6px; background: var(--rose-dark); color: white; border: none; border-radius: 8px; padding: 8px 14px; font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; cursor: pointer; text-decoration: none; transition: background .2s; }
+.btn-pogledaj:hover { background: #DB2777; }
+.btn-pogledaj svg { width: 14px; height: 14px; stroke: white; fill: none; stroke-width: 2; }
+
+/* ── SHARED BUTTONS ── */
+.btn-primary { display: block; width: 100%; background: var(--rose-dark); color: white; border: none; border-radius: 50px; padding: 14px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 16px; transition: all .2s; text-align: center; text-decoration: none; }
+.btn-primary:hover { background: #DB2777; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(236,72,153,0.22); }
+.btn-primary:disabled { background: #D4B8C8; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-outline { display: block; width: 100%; background: none; color: var(--text-mid); border: 1.5px solid #E8D0DC; border-radius: 50px; padding: 13px; font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; text-align: center; text-decoration: none; transition: all .2s; margin-top: 10px; }
+.btn-outline:hover { border-color: var(--rose); color: var(--rose-dark); }
+
+/* ── FOOTER ── */
+footer { background: var(--white); border-top: 1px solid #F3E8EE; padding: 32px 40px 18px; margin-top: auto; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; margin-bottom: 18px; }
+.footer-col h4 { font-family: 'Playfair Display', serif; font-size: 15px; margin-bottom: 8px; color: var(--text-dark); }
+.footer-col p  { font-size: 13px; color: var(--text-light); line-height: 1.9; }
+.footer-col a  { font-size: 13px; color: var(--rose-dark); line-height: 1.9; display: block; text-decoration: none; }
+.footer-col a:hover { text-decoration: underline; }
+.footer-copy { text-align: center; font-size: 12px; color: var(--text-light); padding-top: 14px; border-top: 1px solid #F3E8EE; }
+
+/* ── IMAGE CONTAINERS (cart / checkout / confirmation) ── */
+/* img visible by default, emoji hidden; swap when img fails to load */
+.cart-item-img img,
+.summary-product-img img,
+.summary-img img,
+.order-item-img img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.cart-item-img,
+.summary-product-img,
+.summary-img,
+.order-item-img {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.img-emoji { display: none; font-size: inherit; }
+
+.img-error img     { display: none; }
+.img-error .img-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; height: 100%;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+.fade-up { animation: fadeUp .4s ease both; }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — shared layout & sidebar
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Page stacks: sidebar → top, main → below */
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  /* Sidebar becomes a horizontal pill-strip */
+  aside {
+    position: static;
+    height: auto;
+    overflow-y: visible;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1.5px solid rgba(244,114,182,0.2);
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    scrollbar-width: none;        /* Firefox */
+    -webkit-overflow-scrolling: touch;
+  }
+  aside::-webkit-scrollbar { display: none; }
+
+  /* Hide decorative section label in strip mode */
+  .sidebar-section { display: none; }
+
+  /* All sidebar links become compact pills */
+  .sidebar-home,
+  .sidebar-link {
+    width: auto;
+    white-space: nowrap;
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .sidebar-home { margin-bottom: 0; }
+
+  /* Footer: single column */
+  .footer-grid { grid-template-columns: 1fr; gap: 16px; }
+  footer { padding: 24px 20px 16px; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   NAČIN ZA SLIJEPE I SLABOVIDNE OSOBE  (.a11y-mode na <html>)
+   Cilj: jak kontrast, veći tekst, jasan fokus, manje dekoracije.
+   ════════════════════════════════════════════════════════════ */
+
+/* Ukloni dekorativne uzorke pozadine — smetnja kod slabog vida */
+.a11y-mode body,
+.a11y-mode header {
+  background-image: none;
+}
+.a11y-mode body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+/* Header i podjele jasno omeđeni */
+.a11y-mode header {
+  background-color: #ffffff;
+  border-bottom: 3px solid #000000;
+}
+.a11y-mode aside { border-right: 2px solid #000000; }
+.a11y-mode footer { border-top: 2px solid #000000; }
+
+/* Crni, veći sans-serif tekst kroz cijelu stranicu */
+.a11y-mode h1,
+.a11y-mode h2,
+.a11y-mode h3,
+.a11y-mode h4,
+.a11y-mode p,
+.a11y-mode a,
+.a11y-mode span,
+.a11y-mode li,
+.a11y-mode label,
+.a11y-mode input,
+.a11y-mode textarea,
+.a11y-mode select,
+.a11y-mode button,
+.a11y-mode .brand-text h1,
+.a11y-mode .brand-text p,
+.a11y-mode .section-title,
+.a11y-mode .sidebar-home,
+.a11y-mode .sidebar-section,
+.a11y-mode .sidebar-link,
+.a11y-mode .cat-title,
+.a11y-mode .cat-count,
+.a11y-mode .product-card-name,
+.a11y-mode .product-card-desc,
+.a11y-mode .product-card-price,
+.a11y-mode .product-info-col h1,
+.a11y-mode .product-section-label,
+.a11y-mode .product-detail-box p,
+.a11y-mode .product-price,
+.a11y-mode .product-price-note,
+.a11y-mode .color-hint,
+.a11y-mode .selected-color-name,
+.a11y-mode .qty-num,
+.a11y-mode .need-variant,
+.a11y-mode .delivery-box h4,
+.a11y-mode .delivery-box li,
+.a11y-mode .footer-col p,
+.a11y-mode .footer-col a,
+.a11y-mode .footer-copy {
+  color: #000000 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.a11y-mode p,
+.a11y-mode a,
+.a11y-mode li,
+.a11y-mode label,
+.a11y-mode input,
+.a11y-mode textarea,
+.a11y-mode select,
+.a11y-mode button,
+.a11y-mode .sidebar-home,
+.a11y-mode .sidebar-link,
+.a11y-mode .product-card-name,
+.a11y-mode .product-card-desc,
+.a11y-mode .product-detail-box p,
+.a11y-mode .delivery-box li {
+  font-size: 1.08rem !important;
+  line-height: 1.7;
+}
+
+.a11y-mode h1,
+.a11y-mode h2,
+.a11y-mode .section-title,
+.a11y-mode .cat-title,
+.a11y-mode .product-info-col h1 {
+  font-size: 1.9rem !important;
+  line-height: 1.3;
+}
+
+.a11y-mode h3,
+.a11y-mode h4,
+.a11y-mode .product-card-price,
+.a11y-mode .product-price {
+  font-size: 1.35rem !important;
+  line-height: 1.35;
+}
+
+.a11y-mode .sidebar-section,
+.a11y-mode .product-section-label,
+.a11y-mode .cat-count,
+.a11y-mode .product-price-note,
+.a11y-mode .color-hint,
+.a11y-mode .footer-copy {
+  font-size: 1rem !important;
+}
+
+/* Badge košarice mora ostati čitljiv unutar malog kruga */
+.a11y-mode #cart-count {
+  color: #ffffff !important;
+  font-size: 12px !important;
+  line-height: 1;
+}
+
+/* Gumb za accessibility mod u aktivnom stanju ne smije imati bijeli tekst u ovom modu */
+.a11y-mode .a11y-toggle[aria-pressed="true"] {
+  background: #ffffff;
+  color: #000000;
+  border-color: #000000;
+}
+
+/* Jasan, vidljiv fokus na SVIM interaktivnim elementima */
+.a11y-mode a:focus,
+.a11y-mode button:focus,
+.a11y-mode input:focus,
+.a11y-mode select:focus,
+.a11y-mode textarea:focus,
+.a11y-mode summary:focus,
+.a11y-mode [tabindex]:focus {
+  outline: 3px solid #1559ed;
+  outline-offset: 2px;
+}
+
+/* Linkovi u sadržaju podvučeni radi prepoznatljivosti */
+.a11y-mode main a:not(.btn-primary):not(.btn-outline):not(.btn-pogledaj):not(.product-card) {
+  text-decoration: underline;
+}
+
+/* ════════════════════════════════════════════════════════════
+   A11Y MOD — RESPONZIVNOST HEADERA (samo kad je mod uključen)
+   Veći font je inače prerastao fiksnu visinu headera i ulazio
+   u sadržaj; ovdje header dobiva fleksibilnu visinu, a naslov
+   i gumb se drže razumne veličine.
+   ════════════════════════════════════════════════════════════ */
+
+/* Header više nije fiksne visine pa se sadržaj ne prelijeva */
+.a11y-mode header {
+  height: auto;
+  min-height: var(--nav-h);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+/* Naslov u headeru ostaje kompaktan (page naslovi i dalje veliki) */
+.a11y-mode .brand-text h1 { font-size: 1.2rem !important; line-height: 1.2; }
+.a11y-mode .brand-text p  { font-size: 0.92rem !important; }
+
+@media (max-width: 768px) {
+  .a11y-mode header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .a11y-mode .a11y-toggle {
+    font-size: 0.9rem !important;
+    padding: 7px 10px;
+    gap: 6px;
+  }
+  .a11y-mode .a11y-toggle svg { width: 18px; height: 18px; }
+  .a11y-mode .brand-text h1 { font-size: 1.05rem !important; }
+  .a11y-mode .brand-text p  { font-size: 0.82rem !important; }
+}
+
+@media (max-width: 480px) {
+  /* Brand i akcije u zaseban red, akcije poravnate desno */
+  .a11y-mode header { justify-content: space-between; }
+  .a11y-mode .a11y-toggle {
+    font-size: 0.85rem !important;
+    padding: 6px 9px;
+  }
+  .a11y-mode .a11y-toggle svg { width: 16px; height: 16px; }
+}

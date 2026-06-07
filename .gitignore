@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Node / Firebase Functions
+node_modules/
+functions/node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Okruženje i tajne (App Password, API ključevi)
+.env
+.env.*
+functions/.env
+functions/.env.*
+*.local
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+.runtimeconfig.json
+
+# Logovi
+*.log
