@@ -177,7 +177,7 @@ function buildCustomerEmail(order, items, total) {
   const html =
     '<div style="font-family:Arial,Helvetica,sans-serif;color:#333;max-width:600px;margin:0 auto">' +
     '<h2 style="color:#b56576">Hvala na narudžbi, ' + esc(order.ime) + '!</h2>' +
-    '<p>Vaša narudžba je uspješno primljena. <strong>Prodavač će vam se javiti s detaljima ' +
+    '<p>Vaša narudžba je uspješno primljena. <strong>SEKE Rukotvorine će vam se javiti s detaljima ' +
     'o plaćanju unutar 24 sata.</strong></p>' +
     '<h3>Pregled narudžbe</h3>' +
     itemsTableHTML(items) +
