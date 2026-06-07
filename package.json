@@ -1,0 +1,12 @@
+{
+  "name": "seke-rukotvorine",
+  "version": "1.0.0",
+  "description": "SEKE Rukotvorine webshop — statična stranica + Vercel serverless mail funkcija",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.15"
+  }
+}

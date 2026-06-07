@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('total-val').textContent = `€${total.toFixed(2)}`;
 });
 
-function submitOrder() {
+async function submitOrder() {
   const ime     = document.getElementById('f-ime').value.trim();
   const prezime = document.getElementById('f-prezime').value.trim();
   const email   = document.getElementById('f-email').value.trim();
@@ -102,7 +102,43 @@ function submitOrder() {
   if (!valid) return;
 
   const cart = getCart();
-  localStorage.setItem('lastOrder', JSON.stringify({ ime, prezime, email, cart }));
-  localStorage.removeItem('cart');
-  window.location.href = 'confirmation.html';
+  const btn  = document.getElementById('submit-btn');
+  const errBox = document.getElementById('submit-error');
+
+  // Onemogući gumb dok traje slanje (sprječava dvostruku narudžbu)
+  const btnText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Šalje se…';
+  if (errBox) errBox.style.display = 'none';
+
+  try {
+    // Pošalji mailove preko serverless funkcije (vlasniku + kupcu)
+    const resp = await fetch('/api/send-order-emails', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ime, prezime, email, cart })
+    });
+    if (!resp.ok) {
+      let msg = 'Slanje narudžbe nije uspjelo.';
+      try { const j = await resp.json(); if (j && j.error) msg = j.error; } catch (e) {}
+      throw new Error(msg);
+    }
+
+    // Uspjeh: spremi narudžbu za potvrdu, očisti košaricu i preusmjeri
+    localStorage.setItem('lastOrder', JSON.stringify({ ime, prezime, email, cart }));
+    localStorage.removeItem('cart');
+    window.location.href = 'confirmation.html';
+  } catch (err) {
+    // Greška: prikaži poruku i NE briši košaricu (moguć ponovni pokušaj)
+    console.error('Slanje narudžbe nije uspjelo:', err);
+    btn.disabled = false;
+    btn.textContent = btnText;
+    if (errBox) {
+      errBox.textContent = 'Slanje narudžbe trenutno nije uspjelo. Molimo pokušajte ponovno.';
+      errBox.style.display = 'block';
+    }
+    if (typeof announceWarning === 'function' && isA11yOn()) {
+      announceWarning('Upozorenje: slanje narudžbe nije uspjelo. Molimo pokušajte ponovno.');
+    }
+  }
 }
