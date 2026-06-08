@@ -17,11 +17,6 @@ function applyA11yMode(on) {
   const btn = document.getElementById('a11y-toggle');
   if (btn) {
     btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-    btn.setAttribute(
-      'aria-label',
-      on ? 'Isključi način za slijepe i slabovidne osobe'
-         : 'Uključi način za slijepe i slabovidne osobe'
-    );
   }
 }
 
