@@ -84,16 +84,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         <p class="color-hint">Kliknite na naziv varijacije da biste je izabrali</p>
 
         <div class="qty-section">
-          <span class="product-section-label">Količina</span>
           <div class="qty-control">
-            <button class="qty-btn" aria-label="Smanji količinu" onclick="changeQtyLocal(-1)">
+            <button class="qty-btn" onclick="changeQtyLocal(-1)">
               <span class="qty-symbol" aria-hidden="true">−</span>
-              <span class="qty-text">Smanji</span>
+              <span class="qty-text">Smanji količinu</span>
             </button>
-            <span class="qty-num" id="qty-display" aria-live="polite" aria-label="Količina">1</span>
-            <button class="qty-btn" aria-label="Povećaj količinu" onclick="changeQtyLocal(1)">
+            <span class="qty-display-wrap" aria-live="polite" aria-atomic="true">
+              <span class="sr-only">Količina: </span>
+              <span class="qty-num" id="qty-display">1</span>
+            </span>
+            <button class="qty-btn" onclick="changeQtyLocal(1)">
               <span class="qty-symbol" aria-hidden="true">+</span>
-              <span class="qty-text">Povećaj</span>
+              <span class="qty-text">Povećaj količinu</span>
             </button>
           </div>
         </div>

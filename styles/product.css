@@ -125,10 +125,17 @@
 .qty-num { font-size:18px; font-weight:700; min-width:28px; text-align:center; }
 
 /* Tekst "Smanji" / "Povećaj" skriven u normalnom modu */
-.qty-text { display:none; }
+.qty-text {
+  position:absolute; width:1px; height:1px;
+  margin:-1px; padding:0; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
 
 /* U a11y modu: gumbi prikazuju tekst umjesto simbola */
-.a11y-mode .qty-text { display:inline; }
+.a11y-mode .qty-text {
+  position:static; width:auto; height:auto;
+  margin:0; clip:auto; overflow:visible; white-space:normal; display:inline;
+}
 .a11y-mode .qty-symbol { display:none; }
 .a11y-mode .qty-btn {
   width: auto;
