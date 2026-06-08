@@ -216,7 +216,7 @@ function confirmAdd() {
   }
   const btn = document.getElementById('add-btn');
   btn.style.background = '#16A34A';
-  btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:18px;height:18px;stroke:white;fill:none;stroke-width:2.5"><polyline points="20 6 9 17 4 12"/></svg> Dodano!';
+  btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:18px;height:18px;stroke:white;fill:none;stroke-width:2.5"><path d="M20 6 9 17l-5-5"/></svg> Dodano!';
   setTimeout(() => {
     btn.style.background = '';
     btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:18px;height:18px;stroke:white;fill:none;stroke-width:2"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg> Dodaj u košaricu';
