@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <ul>
             <li>Besplatna dostava</li>
             <li>Dostava u roku do 14 radnih dana</li>
-            <li>Povraćaj robe nije moguć</li>
+            <li>Povrat robe nije moguć</li>
             <li>Svi detalji o narudžbi bit će poslani putem e-maila nakon kupovine</li>
           </ul>
         </div>
