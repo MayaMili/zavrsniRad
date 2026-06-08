@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
 
         <button class="add-btn" id="add-btn" onclick="openModal()">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <!-- Shopping-bag icon: Lucide Icons (ISC License) - https://lucide.dev/icons/shopping-bag --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag" aria-hidden="true" focusable="false"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg>
           Dodaj u košaricu
         </button>
         <a href="cart.html" class="go-cart-link" id="go-cart-link" style="display:none">
@@ -219,7 +219,7 @@ function confirmAdd() {
   btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:18px;height:18px;stroke:white;fill:none;stroke-width:2.5"><polyline points="20 6 9 17 4 12"/></svg> Dodano!';
   setTimeout(() => {
     btn.style.background = '';
-    btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:18px;height:18px;stroke:white;fill:none;stroke-width:2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg> Dodaj u košaricu';
+    btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:18px;height:18px;stroke:white;fill:none;stroke-width:2"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg> Dodaj u košaricu';
   }, 2000);
 }
 

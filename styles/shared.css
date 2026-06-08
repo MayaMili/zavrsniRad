@@ -88,7 +88,7 @@ header {
 }
 .a11y-toggle:hover { background: var(--rose-light); border-color: var(--rose); }
 .a11y-toggle svg { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
-.a11y-toggle svg circle { fill: currentColor; stroke: none; }
+/* Uklonjeno: punilo je glavu starog čovječuljka. Lucide "eye" zjenica mora ostati obrub (stroke). */
 .a11y-toggle[aria-pressed="true"] { background: var(--rose-dark); color: #fff; border-color: var(--rose-dark); }
 .a11y-toggle[aria-pressed="true"]:hover { background: #DB2777; }
 
