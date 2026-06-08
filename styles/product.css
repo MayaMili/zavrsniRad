@@ -1,13 +1,40 @@
-.product-main { padding: 36px 40px 52px; }
+.product-main {
+  padding: 36px 40px 52px;
+}
 
-.breadcrumb { font-size:13px; color:var(--text-light); margin-bottom:24px; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
-.breadcrumb a { color:var(--text-light); text-decoration:none; transition:color .15s; }
-.breadcrumb a:hover { color:var(--rose-dark); }
-.breadcrumb span { color:var(--text-light); }
+.breadcrumb {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.breadcrumb a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.breadcrumb a:hover {
+  color: var(--rose-dark);
+}
+.breadcrumb span {
+  color: var(--text-light);
+}
 
-.product-detail { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
 
-.product-images { display:flex; flex-direction:column; gap:12px; }
+.product-images {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
 /* .product-main-img {
   width:100%; 
@@ -23,120 +50,273 @@
   aspect-ratio: 4/5;
   border-radius: 16px;
   overflow: hidden;
-  background: linear-gradient(135deg,var(--warm-pink),var(--rose-light));
-  display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(135deg, var(--warm-pink), var(--rose-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.product-main-img img { width:100%; height:100%; object-fit:cover; display:block; backface-visibility:hidden; transform:translateZ(0); }
-.product-main-img .img-ph { font-size:80px; }
-.product-thumb-row { display:flex; gap:10px; }
-.product-thumb { width:72px; height:72px; border-radius:10px; overflow:hidden; background:linear-gradient(135deg,var(--warm-pink),var(--rose-light)); border:2px solid transparent; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:28px; transition:border-color .15s; flex-shrink:0; }
-.product-thumb img { width:100%; height:100%; object-fit:cover; }
-.product-thumb.active { border-color:var(--rose-dark); }
+.product-main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.product-main-img .img-ph {
+  font-size: 80px;
+}
+.product-thumb-row {
+  display: flex;
+  gap: 10px;
+}
+.product-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--warm-pink), var(--rose-light));
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: border-color 0.15s;
+  flex-shrink: 0;
+}
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-thumb.active {
+  border-color: var(--rose-dark);
+}
 
-.product-info-col h1 { font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:var(--text-dark); margin-bottom:6px; }
-.product-subtitle { font-size:14px; color:var(--text-light); margin-bottom:20px; }
+.product-info-col h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+.product-subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
 
-.product-section-label { font-size:12px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:var(--text-light); margin-bottom:8px; display:block; }
-.product-detail-box { background:var(--cream2); border-radius:12px; padding:16px 18px; margin-bottom:20px; }
-.product-detail-box p { font-size:14px; line-height:1.75; color:var(--text-mid); }
+.product-section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  display: block;
+}
+.product-detail-box {
+  background: var(--cream2);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+.product-detail-box p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-mid);
+}
 
-.product-price-row { margin-bottom:20px; }
-.product-price { font-size:32px; font-weight:700; color:var(--text-dark); display:block; margin-bottom:2px; }
-.product-price-note { font-size:13px; color:var(--text-light); }
+.product-price-row {
+  margin-bottom: 20px;
+}
+.product-price {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: block;
+  margin-bottom: 2px;
+}
+.product-price-note {
+  font-size: 13px;
+  color: var(--text-light);
+}
 
-.color-swatches { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:6px; }
+.color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 6px;
+}
 
 /* ── NORMALNI MOD: krug sa slikom boje ── */
 .color-option {
-  width:60px;
-  height:60px;
-  padding:0;
-  border:2.5px solid transparent;
-  border-radius:50%;
-  background:var(--white);
-  cursor:pointer;
-  box-shadow:0 1px 3px rgba(0,0,0,0.15);
-  overflow:hidden;
-  transition:transform .15s, border-color .15s, box-shadow .15s;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 2.5px solid transparent;
+  border-radius: 50%;
+  background: var(--white);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition:
+    transform 0.15s,
+    border-color 0.15s,
+    box-shadow 0.15s;
 }
-.color-option:hover { transform:scale(1.1); }
-.color-option.selected { border-color:var(--rose-dark); }
+.color-option:hover {
+  transform: scale(1.1);
+}
+.color-option.selected {
+  border-color: var(--rose-dark);
+}
 
 .color-option-swatch {
-  display:block;
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  background-size:160%;
-  background-position:center;
-  background-repeat:no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: 160%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 /* .color-option-text { display:none; } */
 /* normalni mod: vizualno skriveno, ali čitljivo čitaču (kao sr-only) */
 .color-option-text {
-  position:absolute; width:1px; height:1px;
-  margin:-1px; padding:0; overflow:hidden;
-  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.color-hint { font-size:12px; color:var(--text-light); margin-bottom:20px; }
-.selected-color-name { font-size:13px; font-weight:600; color:var(--rose-dark); margin-bottom:4px; }
+.color-hint {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+.selected-color-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--rose-dark);
+  margin-bottom: 4px;
+}
 
 /* ── A11Y MOD: obrubljeni tekstualni prozorčić s nazivom boje ── */
 .a11y-mode .color-option {
-  width:auto;
-  height:auto;
-  min-height:44px;
-  padding:10px 16px;
-  border:2px solid #000000;
-  border-radius:10px;
-  background:#ffffff;
-  box-shadow:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  color:#000000 !important;
-  font-family:Arial, Helvetica, sans-serif !important;
-  font-size:1.08rem !important;
-  font-weight:700;
+  width: auto;
+  height: auto;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.08rem !important;
+  font-weight: 700;
 }
-.a11y-mode .color-option:hover { transform:none; }
-.a11y-mode .color-option-swatch { display:none; }
+.a11y-mode .color-option:hover {
+  transform: none;
+}
+.a11y-mode .color-option-swatch {
+  display: none;
+}
 /* .a11y-mode .color-option-text { display:inline; } */
 /* a11y mod: prikaži tekst normalno */
 .a11y-mode .color-option-text {
-  position:static; width:auto; height:auto;
-  margin:0; padding:0; overflow:visible;
-  clip:auto; white-space:normal; display:inline;
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  display: inline;
 }
 .a11y-mode .color-option:hover,
 .a11y-mode .color-option.selected {
-  background:#e8f0ff;
-  border-color:#1559ed;
-  color:#000000 !important;
-  box-shadow:0 0 0 2px #1559ed;
+  background: #e8f0ff;
+  border-color: #1559ed;
+  color: #000000 !important;
+  box-shadow: 0 0 0 2px #1559ed;
 }
 
-.qty-section { margin-bottom:22px; }
-.qty-control { display:flex; align-items:center; gap:12px; }
-.qty-btn { width:34px; height:34px; border-radius:50%; border:1.5px solid #F3D0E4; background:var(--white); cursor:pointer; font-size:18px; font-weight:700; color:var(--text-mid); display:flex; align-items:center; justify-content:center; transition:all .15s; line-height:1; }
-.qty-btn:hover { background:var(--rose-light); border-color:var(--rose); color:var(--rose-dark); }
-.qty-num { font-size:18px; font-weight:700; min-width:28px; text-align:center; }
+.qty-section {
+  margin-bottom: 22px;
+}
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.qty-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid #f3d0e4;
+  background: var(--white);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  line-height: 1;
+}
+.qty-btn:hover {
+  background: var(--rose-light);
+  border-color: var(--rose);
+  color: var(--rose-dark);
+}
+.qty-num {
+  font-size: 18px;
+  font-weight: 700;
+  min-width: 28px;
+  text-align: center;
+}
 
 /* Tekst "Smanji" / "Povećaj" skriven u normalnom modu */
 .qty-text {
-  position:absolute; width:1px; height:1px;
-  margin:-1px; padding:0; overflow:hidden;
-  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* U a11y modu: gumbi prikazuju tekst umjesto simbola */
 .a11y-mode .qty-text {
-  position:static; width:auto; height:auto;
-  margin:0; clip:auto; overflow:visible; white-space:normal; display:inline;
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+  overflow: visible;
+  white-space: normal;
+  display: inline;
 }
-.a11y-mode .qty-symbol { display:none; }
+.a11y-mode .qty-symbol {
+  display: none;
+}
 .a11y-mode .qty-btn {
   width: auto;
   height: auto;
@@ -153,84 +333,243 @@
   color: #000000;
 }
 
-.add-btn { display:flex; align-items:center; justify-content:center; gap:8px; width:100%; background:var(--rose-dark); color:white; border:none; border-radius:50px; padding:15px; font-family:'Nunito',sans-serif; font-size:15px; font-weight:700; cursor:pointer; transition:all .2s; margin-bottom:8px; }
-.add-btn:hover:not(:disabled) { background:#DB2777; transform:translateY(-1px); box-shadow:0 6px 20px rgba(236,72,153,.25); }
-.add-btn:disabled { background:#D4B8C8; cursor:not-allowed; }
-.add-btn svg { width:18px; height:18px; stroke:white; fill:none; stroke-width:2; }
+.add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: var(--rose-dark);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 8px;
+}
+.add-btn:hover:not(:disabled) {
+  background: #db2777;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.25);
+}
+.add-btn:disabled {
+  background: #d4b8c8;
+  cursor: not-allowed;
+}
+.add-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2;
+}
 .go-cart-link {
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  background:var(--green);
-  color:white;
-  border:none;
-  border-radius:50px;
-  padding:14px;
-  font-family:'Nunito',sans-serif;
-  font-size:15px;
-  font-weight:700;
-  text-align:center;
-  text-decoration:none;
-  margin-bottom:8px;
-  transition:background .2s, transform .2s, box-shadow .2s;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 14px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 .go-cart-link:hover {
-  background:#15803D;
-  transform:translateY(-1px);
-  box-shadow:0 6px 20px rgba(22,163,74,.22);
+  background: #15803d;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.22);
 }
 .a11y-mode .go-cart-link {
-  background:#ffffff;
-  color:#000000 !important;
-  border:2px solid #000000;
-  border-radius:10px;
-  font-family:Arial, Helvetica, sans-serif !important;
-  font-size:1.08rem !important;
+  background: #ffffff;
+  color: #000000 !important;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.08rem !important;
 }
 .a11y-mode .go-cart-link:hover {
-  background:#e8f0ff;
-  border-color:#1559ed;
-  color:#000000 !important;
+  background: #e8f0ff;
+  border-color: #1559ed;
+  color: #000000 !important;
 }
-.need-variant { font-size:12px; color:var(--rose-dark); text-align:center; margin-top:4px; display:none; }
+.need-variant {
+  font-size: 12px;
+  color: var(--rose-dark);
+  text-align: center;
+  margin-top: 4px;
+  display: none;
+}
 
-.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.35); z-index:200; display:none; align-items:center; justify-content:center; backdrop-filter:blur(3px); }
-.modal-overlay.open { display:flex; }
-.modal { background:var(--white); border-radius:20px; padding:28px 32px; max-width:380px; width:90%; box-shadow:0 20px 60px rgba(0,0,0,0.15); animation:fadeUp .25s ease both; }
-.modal h3 { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; margin-bottom:16px; }
-.modal-item { display:grid; grid-template-columns:56px 1fr; gap:12px; align-items:center; margin-bottom:16px; }
-.modal-img { width:56px; height:56px; border-radius:10px; overflow:hidden; background:linear-gradient(135deg,var(--warm-pink),var(--rose-light)); display:flex; align-items:center; justify-content:center; font-size:22px; }
-.modal-img img { width:100%; height:100%; object-fit:cover; }
-.modal-product-name { font-weight:700; font-size:14px; margin-bottom:2px; }
-.modal-product-sub  { font-size:13px; color:var(--text-light); }
-.modal-product-price { font-size:15px; font-weight:700; color:var(--rose-dark); margin-top:2px; }
-.modal-rows { border-top:1px solid #F3E8EE; padding-top:12px; margin-bottom:16px; }
-.modal-row { display:flex; justify-content:space-between; font-size:13px; color:var(--text-mid); padding:4px 0; }
-.modal-btns { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.modal-cancel { background:var(--white); color:var(--text-mid); border:1.5px solid #E8D0DC; border-radius:50px; padding:12px; font-family:'Nunito',sans-serif; font-size:14px; font-weight:700; cursor:pointer; transition:all .2s; }
-.modal-cancel:hover { border-color:var(--rose); color:var(--rose-dark); }
-.modal-confirm { background:var(--rose-dark); color:white; border:none; border-radius:50px; padding:12px; font-family:'Nunito',sans-serif; font-size:14px; font-weight:700; cursor:pointer; transition:all .2s; }
-.modal-confirm:hover { background:#DB2777; }
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+}
+.modal-overlay.open {
+  display: flex;
+}
+.modal {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 28px 32px;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: fadeUp 0.25s ease both;
+}
+.modal h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.modal-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.modal-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--warm-pink), var(--rose-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.modal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal-product-name {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.modal-product-sub {
+  font-size: 13px;
+  color: var(--text-light);
+}
+.modal-product-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--rose-dark);
+  margin-top: 2px;
+}
+.modal-rows {
+  border-top: 1px solid #f3e8ee;
+  padding-top: 12px;
+  margin-bottom: 16px;
+}
+.modal-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-mid);
+  padding: 4px 0;
+}
+.modal-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.modal-cancel {
+  background: var(--white);
+  color: var(--text-mid);
+  border: 1.5px solid #e8d0dc;
+  border-radius: 50px;
+  padding: 12px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.modal-cancel:hover {
+  border-color: var(--rose);
+  color: var(--rose-dark);
+}
+.modal-confirm {
+  background: var(--rose-dark);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.modal-confirm:hover {
+  background: #db2777;
+}
 
-.delivery-box { background:var(--white); border:1px solid #F3E8EE; border-radius:14px; padding:16px 18px; margin-top:16px; }
-.delivery-box h4 { font-size:14px; font-weight:700; margin-bottom:10px; color:var(--text-dark); }
-.delivery-box ul { list-style:none; }
-.delivery-box li { font-size:13px; color:var(--text-mid); padding:4px 0 4px 20px; position:relative; line-height:1.5; }
-.delivery-box li::before { content:'✓'; position:absolute; left:0; color:var(--rose-dark); font-weight:700; }
-
-/* ══════════════════════════════════════════
-   RESPONSIVE — product page
-   ══════════════════════════════════════════ */
+.delivery-box {
+  background: var(--white);
+  border: 1px solid #f3e8ee;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-top: 16px;
+}
+.delivery-box h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+.delivery-box ul {
+  list-style: none;
+}
+.delivery-box li {
+  font-size: 13px;
+  color: var(--text-mid);
+  padding: 4px 0 4px 20px;
+  position: relative;
+  line-height: 1.5;
+}
+.delivery-box li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--rose-dark);
+  font-weight: 700;
+}
 
 /*
   Na laptop pola-ekrana (~700-950px viewporta) sidebar od 220px ostavlja
   samo ~480-730px za sadržaj — premalo za 2-kolone.
   Prelazimo na 1-kolonu ranije (960px), dok sidebar još stoji.
   Slika zadržava aspect-ratio 4/5 i ograničavamo joj max-width
-  da ne zauzima cijelu širinu na tabletu/laptopu — slično pamigoshop-u.
+  da ne zauzima cijelu širinu na tabletu/laptopu
 */
 @media (max-width: 960px) {
-  .product-main { padding: 28px 24px 48px; }
+  .product-main {
+    padding: 28px 24px 48px;
+  }
 
   .product-detail {
     grid-template-columns: 1fr;
@@ -245,32 +584,60 @@
   }
 
   /* Zadržavamo 4/5 aspect-ratio — ne mijenjamo proporcije */
-  .product-main-img { aspect-ratio: 4/5; }
+  .product-main-img {
+    aspect-ratio: 4/5;
+  }
 
   /* Thumbnails ostaju u redu */
-  .product-thumb-row { flex-wrap: wrap; }
+  .product-thumb-row {
+    flex-wrap: wrap;
+  }
 
-  .product-info-col h1 { font-size: 24px; }
-  .product-price       { font-size: 28px; }
+  .product-info-col h1 {
+    font-size: 24px;
+  }
+  .product-price {
+    font-size: 28px;
+  }
 }
 
 /* Mobilni telefoni — sidebar postaje strip (iz shared.css),
    slika malo niža da ne dominira ekranom */
 @media (max-width: 768px) {
-  .product-main { padding: 20px 16px 40px; }
+  .product-main {
+    padding: 20px 16px 40px;
+  }
 
-  .product-images { max-width: 360px; }
+  .product-images {
+    max-width: 360px;
+  }
 
-  .product-main-img { aspect-ratio: 4/5; }
+  .product-main-img {
+    aspect-ratio: 4/5;
+  }
 
-  .product-info-col h1 { font-size: 22px; }
-  .product-price       { font-size: 26px; }
+  .product-info-col h1 {
+    font-size: 22px;
+  }
+  .product-price {
+    font-size: 26px;
+  }
 
-  .a11y-mode .color-option { min-height: 40px; padding: 9px 12px; font-size: 1rem !important; }
+  .a11y-mode .color-option {
+    min-height: 40px;
+    padding: 9px 12px;
+    font-size: 1rem !important;
+  }
 }
 
 @media (max-width: 480px) {
-  .product-images { max-width: 100%; }
-  .product-main-img { aspect-ratio: 3/4; }
-  .a11y-mode .color-option { width: 100%; }
+  .product-images {
+    max-width: 100%;
+  }
+  .product-main-img {
+    aspect-ratio: 3/4;
+  }
+  .a11y-mode .color-option {
+    width: 100%;
+  }
 }
